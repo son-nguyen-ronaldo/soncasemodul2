@@ -70,6 +70,7 @@ public class EmployeeView {
         Employee employeePartTime = new EmployeePartTime(name, id, age, address, phoneNumber, status, useName, password, salaryTime, wordTime);
         return employeePartTime;
     }
+    //thêm nhân viên
 
     public void addEmployee() {
         System.out.println("Nhập số lượng nhân viên bạn muốn thêm: ");

@@ -22,7 +22,7 @@ public class Validate {
                 int number = Integer.parseInt(this.scanner.nextLine());
                 return number;
             } catch (Exception var3) {
-                System.out.println("Phải là số!!\nNhập lại: ");
+                System.out.println("Phải là số!!\n Nhập lại: ");
             }
         }
     }

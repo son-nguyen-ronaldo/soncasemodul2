@@ -47,7 +47,7 @@ public class FileEmployee {
         if (file.length() > 0L) {
             try {
                 FileInputStream fileInput = new FileInputStream(file);
-                ObjectInputStream objectInput = new ObjectInputStream(fileInput);
+                ObjectInputStream  objectInput = new ObjectInputStream(fileInput);
                 employees = (List)objectInput.readObject();
             } catch (ClassNotFoundException | IOException var5) {
                 var5.printStackTrace();
