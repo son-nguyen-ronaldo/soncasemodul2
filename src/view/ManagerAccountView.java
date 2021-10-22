@@ -104,14 +104,14 @@ public class ManagerAccountView {
         Iterator var2 = managerAccountList.iterator();
 
         while(var2.hasNext()) {
-            Employee employee = (Employee)var2.next();
+            Employee employee =  (Employee)var2.next();
             System.out.println(employee) ;
         }
 
     }
 
-    public boolean checkLogin(String userName, int password) {
-        List<Employee> managerAccountList =   this.managerAccountController.getManagerAccountList();
+    public  boolean checkLogin(String userName, int password) {
+        List<Employee> managerAccountList =    this.managerAccountController.getManagerAccountList();
         Iterator var4 =  managerAccountList.iterator();
 
         Employee employee;
@@ -119,9 +119,9 @@ public class ManagerAccountView {
             if (!var4.hasNext()) {
                 return false;
             }
-
+//
             employee  = (Employee)var4.next();
-        } while(!employee.getUseName().equals(userName) || employee.getPassword() != password);
+        } while(!employee.getUseName().equals(userName) || employee.getPassword() !=  password);
 
         return true;
     }
