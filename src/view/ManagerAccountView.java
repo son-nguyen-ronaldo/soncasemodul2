@@ -105,14 +105,14 @@ public class ManagerAccountView {
 
         while(var2.hasNext()) {
             Employee employee = (Employee)var2.next();
-            System.out.println(employee);
+            System.out.println(employee) ;
         }
 
     }
 
     public boolean checkLogin(String userName, int password) {
-        List<Employee> managerAccountList = this.managerAccountController.getManagerAccountList();
-        Iterator var4 = managerAccountList.iterator();
+        List<Employee> managerAccountList =   this.managerAccountController.getManagerAccountList();
+        Iterator var4 =  managerAccountList.iterator();
 
         Employee employee;
         do {
@@ -120,17 +120,17 @@ public class ManagerAccountView {
                 return false;
             }
 
-            employee = (Employee)var4.next();
+            employee  = (Employee)var4.next();
         } while(!employee.getUseName().equals(userName) || employee.getPassword() != password);
 
         return true;
     }
 
-    public void adminMenu() {
+    public void  adminMenu() {
         int choice = -1;
 
         while(choice != 0) {
-            System.out.println("\n Nhấn phím 1 để thêm tài khoản quản lý nhân viên.\n Nhấn phím 2 để xóa tài khoản quản lý nhân viên.\n Nhấn phím 3 để hiển thị tài khoản đăng nhập quản lý người dùng.\n Nhấn phím 0 để thoát.");
+            System.out.println("\n Nhấn phím  1 để thêm tài khoản quản lý nhân viên.\n Nhấn phím 2 để xóa tài khoản quản lý nhân viên.\n Nhấn phím 3 để hiển thị tài khoản đăng nhập quản lý người dùng.\n Nhấn phím 0 để thoát.");
             choice = this.validate.inputInterger();
             switch(choice) {
                 case 1:
